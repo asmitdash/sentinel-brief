@@ -4,7 +4,7 @@ import httpx
 from tenacity import retry, retry_if_exception_type, stop_after_attempt, wait_exponential
 
 DEFAULT_TIMEOUT = httpx.Timeout(connect=10.0, read=60.0, write=30.0, pool=10.0)
-USER_AGENT = "sentinel-brief/0.1 (+https://github.com/asmitdash/sentinel-brief)"
+USER_AGENT = "sentinel/0.1 (+https://github.com/asmitdash/sentinel)"
 
 
 def make_client(headers: dict[str, str] | None = None) -> httpx.Client:

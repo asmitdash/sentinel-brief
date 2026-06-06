@@ -39,7 +39,7 @@ from .schemas import (
 configure_logging()
 log = get_logger("api")
 
-app = FastAPI(title="sentinel-brief", version="0.1.0")
+app = FastAPI(title="Sentinel", version="0.1.0")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["http://localhost:3000", "http://127.0.0.1:3000"],

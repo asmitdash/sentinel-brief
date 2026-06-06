@@ -1,6 +1,6 @@
 "use client";
 
-import { use, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import {
   api,
   type BriefOut,
@@ -8,8 +8,8 @@ import {
   type Finding,
 } from "../../../lib/api";
 
-export default function WatchlistPage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = use(params);
+export default function WatchlistPage({ params }: { params: { slug: string } }) {
+  const { slug } = params;
   const [findings, setFindings] = useState<Finding[]>([]);
   const [briefs, setBriefs] = useState<BriefSummary[]>([]);
   const [busy, setBusy] = useState<string | null>(null);

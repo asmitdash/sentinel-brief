@@ -10,10 +10,10 @@ sentinel ingest run --since 1d
 # For every watchlist, run match + brief
 python - <<'PY'
 from sqlalchemy import select
-from sentinel_brief.db import session_scope
-from sentinel_brief.models import Watchlist
-from sentinel_brief.match.matcher import match_watchlist
-from sentinel_brief.brief import generate_brief
+from sentinel.db import session_scope
+from sentinel.models import Watchlist
+from sentinel.match.matcher import match_watchlist
+from sentinel.brief import generate_brief
 
 with session_scope() as s:
     slugs = [w.slug for w in s.execute(select(Watchlist)).scalars()]

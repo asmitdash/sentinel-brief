@@ -1,7 +1,7 @@
 from datetime import datetime, timedelta, timezone
 from types import SimpleNamespace
 
-from sentinel_brief.match.scoring import score_finding
+from sentinel.match.scoring import score_finding
 
 
 def _adv(severity=None, kev=False, epss=None, modified_days_ago=1):

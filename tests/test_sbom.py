@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from sentinel_brief.match.sbom import (
+from sentinel.match.sbom import (
     parse_package_json,
     parse_requirements_txt,
     parse_sbom,

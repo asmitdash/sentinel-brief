@@ -11,12 +11,12 @@ from pathlib import Path
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
-from sentinel_brief.brief import generate_brief
-from sentinel_brief.match.matcher import match_watchlist
-from sentinel_brief.match.sbom import parse_sbom
-from sentinel_brief.match.watchlist_ops import register_watchlist
-from sentinel_brief.models import Advisory, AffectedRange, Reference
-from sentinel_brief.models.base import Base
+from sentinel.brief import generate_brief
+from sentinel.match.matcher import match_watchlist
+from sentinel.match.sbom import parse_sbom
+from sentinel.match.watchlist_ops import register_watchlist
+from sentinel.models import Advisory, AffectedRange, Reference
+from sentinel.models.base import Base
 
 
 def test_e2e_offline(tmp_path: Path, monkeypatch):
@@ -24,7 +24,7 @@ def test_e2e_offline(tmp_path: Path, monkeypatch):
     db_url = f"sqlite+pysqlite:///{db_path}"
 
     # Rebind the package's engine + session before any session_scope is opened
-    import sentinel_brief.db as dbmod
+    import sentinel.db as dbmod
 
     engine = create_engine(db_url, future=True)
     Base.metadata.create_all(engine)

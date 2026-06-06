@@ -1,4 +1,4 @@
-from sentinel_brief.match.version import cmp, in_range
+from sentinel.match.version import cmp, in_range
 
 
 def test_cmp_basic():

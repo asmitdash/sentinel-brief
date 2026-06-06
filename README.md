@@ -1,4 +1,4 @@
-# sentinel-brief
+# sentinel
 
 Daily cyber-threat OSINT brief over an SBOM.
 
@@ -6,7 +6,7 @@ Upload a `requirements.txt` / `package.json` / SBOM. Every morning, get a Claude
 
 Personal-learning project. Free / OSS deps only. Single-machine deployable.
 
-- **Repo:** https://github.com/asmitdash/sentinel-brief
+- **Repo:** https://github.com/asmitdash/sentinel
 - **Frontend (Vercel):** https://web-mu-drab-33.vercel.app
 - **Backend:** runs locally — Vercel hosts the UI only; see [Deployment](#deployment).
 
@@ -108,7 +108,7 @@ use the regional inference-profile prefix (Bedrock requires it in some regions):
 
 ## Layout
 
-- `src/sentinel_brief/` — Python package (ingest, match, brief, api, models)
+- `src/sentinel/` — Python package (ingest, match, brief, api, models)
 - `web/` — Next.js dashboard
 - `fixtures/` — sample SBOMs and seed data
 - `scripts/` — operational scripts (cron, deploy)

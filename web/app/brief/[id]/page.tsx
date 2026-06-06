@@ -1,10 +1,10 @@
 "use client";
 
-import { use, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { api, type BriefOut } from "../../../lib/api";
 
-export default function BriefPage({ params }: { params: Promise<{ id: string }> }) {
-  const { id } = use(params);
+export default function BriefPage({ params }: { params: { id: string } }) {
+  const { id } = params;
   const [brief, setBrief] = useState<BriefOut | null>(null);
   const [error, setError] = useState<string | null>(null);
 

@@ -1,4 +1,4 @@
-"""sentinel-brief CLI — `sentinel <command> ...`"""
+"""sentinel CLI — `sentinel <command> ...`"""
 
 from __future__ import annotations
 
@@ -156,7 +156,7 @@ def api_serve(host: str, port: int, reload: bool) -> None:
     import uvicorn
 
     init_db()
-    uvicorn.run("sentinel_brief.api.app:app", host=host, port=port, reload=reload)
+    uvicorn.run("sentinel.api.app:app", host=host, port=port, reload=reload)
 
 
 if __name__ == "__main__":

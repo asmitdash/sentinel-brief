@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "sentinel-brief",
+  title: "Sentinel",
   description: "Daily cyber-threat OSINT brief over an SBOM.",
 };
 
@@ -12,7 +12,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="min-h-screen">
         <header className="border-b border-zinc-800 px-6 py-4 flex items-center justify-between">
           <a href="/" className="font-semibold tracking-tight">
-            sentinel-brief
+            Sentinel
           </a>
           <nav className="flex gap-4 text-sm text-zinc-400">
             <a href="/" className="hover:text-zinc-100">Watchlists</a>
